@@ -655,8 +655,8 @@ def index_page():
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Checkout 1 Queue Analytics Server")
-    parser.add_argument("--host", type=str, default="0.0.0.0", help="Host address (default: 0.0.0.0)")
-    parser.add_argument("--port", type=int, default=8000, help="Port to listen on (default: 8000)")
+    parser.add_argument("--host", type=str, default="127.0.0.1", help="Host address (default: 127.0.0.1)")
+    parser.add_argument("--port", type=int, default=8090, help="Port to listen on (default: 8090)")
     parser.add_argument("--source", type=str, default=RTSP_URL, help="RTSP URL or video file path")
     parser.add_argument("--model", type=str, default=MODEL_PATH, help="Path to YOLO model weights")
     parser.add_argument("--alert-threshold", type=int, default=QUEUE_LENGTH_ALERT_THRESHOLD,
