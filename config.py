@@ -36,8 +36,8 @@ ROI_COORDS = {
 
 # 🌸 PINK (region_1): Arrival & Waiting Floor Area in Main Aisle
 PINK_ZONE_NORM = np.array([
-    [0.6000, 0.4292],   # Top-left
-    [0.9074, 0.4387],   # Top-right
+    [0.6000, 0.4692],   # Top-left
+    [0.9074, 0.4787],   # Top-right
     [0.9809, 0.6215],   # Bottom-right
     [0.5741, 0.6202]    # Bottom-left
 ], dtype=np.float32)
@@ -45,7 +45,7 @@ PINK_ZONE_NORM = np.array([
 # 🔴 RED (region_2): Transition & Kiosk Corridor Area
 RED_ZONE_NORM = np.array([
     [0.4354, 0.3797],   # Top-left (meeting Green)
-    [0.6000, 0.4292],   # Top-right (meeting Pink)
+    [0.6000, 0.4692],   # Top-right (meeting Pink)
     [0.5741, 0.6202],   # Bottom-right (meeting Pink)
     [0.4000, 0.4483]    # Bottom-left (meeting Green)
 ], dtype=np.float32)
@@ -94,7 +94,7 @@ SPATIAL_CONTINUITY_TOLERANCE = 0.35
 # ==============================================================================
 # 5. ALERT THRESHOLDS
 # ==============================================================================
-QUEUE_LENGTH_ALERT_THRESHOLD = 2
+QUEUE_LENGTH_ALERT_THRESHOLD = 3
 QUEUE_LENGTH_SUSTAINED_SEC = 15.0
 EXCESSIVE_WAIT_ALERT_SEC = 240.0
 ALERT_COOLDOWN_SEC = 60.0
