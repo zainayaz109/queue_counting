@@ -1,0 +1,8 @@
+# Optimized ByteTrack Configuration for Retail Queue Management
+tracker_type: bytetrack
+track_high_thresh: 0.25 # First-stage association threshold
+track_low_thresh: 0.10  # Second-stage threshold for partially occluded persons
+new_track_thresh: 0.25  # Minimum confidence to initiate a new track
+track_buffer: 90        # 90 frames = 4.5 seconds memory buffer at 20 FPS (prevents ID loss)
+match_thresh: 0.60      # Robust IoU matching threshold for deformed/occluded persons
+fuse_score: True        # Fuse detection score with motion/IoU for stable matching
