@@ -36,24 +36,24 @@ ROI_COORDS = {
 
 # 🌸 PINK (region_1): Arrival & Waiting Floor Area in Main Aisle
 PINK_ZONE_NORM = np.array([
-    [0.6000, 0.4692],   # Top-left
-    [0.9074, 0.4787],   # Top-right
+    [0.6000, 0.4592],   # Top-left
+    [0.9074, 0.4587],   # Top-right
     [0.9809, 0.6215],   # Bottom-right
     [0.5741, 0.6202]    # Bottom-left
 ], dtype=np.float32)
 
 # 🔴 RED (region_2): Transition & Kiosk Corridor Area
 RED_ZONE_NORM = np.array([
-    [0.4354, 0.3797],   # Top-left (meeting Green)
-    [0.6000, 0.4692],   # Top-right (meeting Pink)
+    [0.4354, 0.3597],   # Top-left (meeting Green)
+    [0.6000, 0.4592],   # Top-right (meeting Pink)
     [0.5741, 0.6202],   # Bottom-right (meeting Pink)
     [0.4000, 0.4483]    # Bottom-left (meeting Green)
 ], dtype=np.float32)
 
 # 🟢 GREEN (region_3): Checkout 1 Counter
 GREEN_ZONE_NORM = np.array([
-    [0.25, 0.3881],   # Top-left
-    [0.4354, 0.3797],   # Top-right (meeting Red)
+    [0.25, 0.3681],   # Top-left
+    [0.4354, 0.3597],   # Top-right (meeting Red)
     [0.4000, 0.4483],   # Bottom-right (meeting Red)
     [0.21, 0.4470]    # Bottom-left
 ], dtype=np.float32)
@@ -75,7 +75,7 @@ YELLOW_ZONE_NORM = np.array([
 # 4. TEMPORAL & DWELL THRESHOLDS
 # ==============================================================================
 # Continuous dwell duration (seconds) inside combined QUEUE_ROI (PINK ∪ RED ∪ GREEN) to become QUEUE
-QUEUE_DWELL_SECONDS = 5.0
+QUEUE_DWELL_SECONDS = 10.0
 
 # Grace period (seconds) for a CANDIDATE who temporarily steps out of QUEUE_ROI before dwell resets
 CANDIDATE_EXIT_GRACE_SECONDS = 3.0
